@@ -157,7 +157,8 @@ def index():
 
 def generate_frames():
     global known_face_encodings
-    video_capture = cv2.VideoCapture(0)
+    rtsp_url = 'rtsp://admin:skypler@sriram@210.18.176.33:554/Streaming/Channels/101'
+    video_capture = cv2.VideoCapture(rtsp_url)
 
     while True:
         success, frame = video_capture.read()
